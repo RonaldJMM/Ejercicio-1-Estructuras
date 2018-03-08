@@ -16,87 +16,28 @@ class ControladorEjercicio extends Controller
 	        
 	    	$datos=[];
 
-	    	$datos[]=['nombres'=>'Carlos','apellidos'=>'Martinez','edad'=>'11','pais'=>'Colombia','idioma'=>'Español Colombia'];
-	    	$datos[]=['nombres'=>'Carlos','apellidos'=>'Martinez','edad'=>'11','pais'=>'Colombia','idioma'=>'Español Colombia'];
-	    	$datos[]=['nombres'=>'Carlos','apellidos'=>'Martinez','edad'=>'11','pais'=>'Colombia','idioma'=>'Español Colombia'];
-	    	$datos[]=['nombres'=>'Carlos','apellidos'=>'Martinez','edad'=>'11','pais'=>'Colombia','idioma'=>'Español Colombia'];
-	    	$datos[]=['nombres'=>'Carlos','apellidos'=>'Martinez','edad'=>'11','pais'=>'Colombia','idioma'=>'Español Colombia'];
-	    	$datos[]=['nombres'=>'Carlos','apellidos'=>'Martinez','edad'=>'11','pais'=>'Colombia','idioma'=>'Español Colombia'];
-	    	$datos[]=['nombres'=>'Carlos','apellidos'=>'Martinez','edad'=>'11','pais'=>'Colombia','idioma'=>'Español Colombia'];
-	    	$datos[]=['nombres'=>'Carlos','apellidos'=>'Martinez','edad'=>'11','pais'=>'Colombia','idioma'=>'Español Colombia'];
-	    	$datos[]=['nombres'=>'Carlos','apellidos'=>'Martinez','edad'=>'11','pais'=>'Colombia','idioma'=>'Español Colombia'];
-	    	$datos[]=['nombres'=>'Carlos','apellidos'=>'Martinez','edad'=>'11','pais'=>'Colombia','idioma'=>'Español Colombia'];
+	    	$datos[]=['nombres'=>'Carlos','apellidos'=>'Martinez','edad'=>'23','pais'=>'Colombia','idioma'=>'Español Colombia'];
+	    	$datos[]=['nombres'=>'Juan','apellidos'=>'Enriquez','edad'=>'31','pais'=>'España','idioma'=>'Español España'];
+	    	$datos[]=['nombres'=>'Maria','apellidos'=>'Mora','edad'=>'21','pais'=>'Colombia','idioma'=>'Ingles'];
+	    	$datos[]=['nombres'=>'Carlos','apellidos'=>'Martinez','edad'=>'17','pais'=>'Chile','idioma'=>'Japones'];
+	    	$datos[]=['nombres'=>'Mario','apellidos'=>'Martinez','edad'=>'43','pais'=>'Argentina','idioma'=>'Español Argentino'];
+	    	$datos[]=['nombres'=>'Mario','apellidos'=>'Sandoval','edad'=>'17','pais'=>'Colombia','idioma'=>'Español Colombia'];
+	    	$datos[]=['nombres'=>'Carlos','apellidos'=>'Moreno','edad'=>'36','pais'=>'Mexico','idioma'=>'Español Mexico'];
+	    	$datos[]=['nombres'=>'Juan','apellidos'=>'Mora','edad'=>'23','pais'=>'Mexico','idioma'=>'Español Mexico'];
+	    	$datos[]=['nombres'=>'Carlos','apellidos'=>'Martinez','edad'=>'50','pais'=>'Chile','idioma'=>'Español Chile'];
+	    	$datos[]=['nombres'=>'Anival','apellidos'=>'Sandoval','edad'=>'54','pais'=>'Brazil','idioma'=>'Portugues'];
 
 	      
 
+	    	$info=[
+	    		'datos'=>$datos,
+	    		'buscador'=>$buscador,
+	    		'datoBusqueda'=>$datoBusqueda
+	    	];
 	    	
-	    	foreach ($datos as $key => $dato) {
-	    		$bandera=0;
-	    		foreach ($dato as $key => $value) {
-	    			switch ($buscador) {
-	    				case 'Nombres':
-	    					if($key=="nombres"){
-		    					if($value==$datoBusqueda){
-		    						foreach ($dato as $key => $value) {
-						    			echo $value,"<br>";
-						    		}
-		    					}
-		    				}
-	    					break;
-	    				case 'Apellidos':
-	    					if($key=="apellidos"){
-		    					if($value==$datoBusqueda){
-		    						foreach ($dato as $key => $value) {
-						    			echo $value,"<br>";
-						    		}
-		    					}
-		    				}
-	    					break;
-	    				case 'Edad':
-	    					if($key=="edad"){
-		    					if($value==$datoBusqueda){
-		    						foreach ($dato as $key => $value) {
-						    			echo $value,"<br>";
-						    		}
-		    					}
-		    				}
-	    					break;
-	    				case 'Pais':
-	    					if($key=="pais"){
-		    					if($value==$datoBusqueda){
-		    						foreach ($dato as $key => $value) {
-						    			echo $value,"<br>";
-						    		}
-		    					}
-		    				}
-	    					break;
-	    				case 'Idioma':
-	    					if($key=="idioma"){
-		    					if($value==$datoBusqueda){
-		    						foreach ($dato as $key => $value) {
-						    			echo $value,"<br>";
-						    		}
-		    					}
-		    				} 
-	    					break;
-	    				
-	    				default:
-	    					echo "No existe.";
-	    					break;
-	    			}
-	    			
-	    		}
-	    		if($bandera==1){
-	    		
-		    		echo "<br>";
-		    	}
-	    	
-
-
-	    }
 
 	   	
-	    return view('master');
+	    return view('contenido2',$info);
 	}
 
 }
