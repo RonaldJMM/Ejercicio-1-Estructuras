@@ -15,7 +15,7 @@
 		  
 	</head>
 
-	<body background="imagenes/fondos/degrade ocuro.jpg" link="#ffffcc" vlink="#ffffcc" alink="#ffffcc">
+	<body background="imagenes/fondos/degrade oscuro.jpg" link="#ffffcc" vlink="#ffffcc" alink="#ffffcc">
 			<br>
 			<br>
 			<center>

@@ -11,10 +11,10 @@
 			    	
 					  <form action="{{url('Informacion')}}" method="POST">
 					  	{{csrf_field()}}
-
+					  	
 					  	<label for="buscador">Selecionar: </label><br>
-
-					    <select class="custom-select my-1 mr-sm-2" class="border border-dark"name="buscador">
+					  	<label for="hola" name="hola" value="2">
+					    <select class="custom-select my-1 mr-sm-2" class="border border-dark" name="buscador">
 					      <option>Nombres</option>
 					      <option>Apellidos</option>
 					      <option>Edad</option>
@@ -27,4 +27,5 @@
 					  </form>
 			</div>
 			</font>
+
 @stop
